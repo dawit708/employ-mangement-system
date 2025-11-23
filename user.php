@@ -5,7 +5,7 @@ if(isset($_SESSION['role']) && isset($_SESSION['id'])) {
 <!DOCTYPE html>
 <html>
 <head>
-<title>Dashboard</title>
+<title>Mange Users</title>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="css/style.css">
 </head>
@@ -15,6 +15,7 @@ if(isset($_SESSION['role']) && isset($_SESSION['id'])) {
 <div class="body">
  <?php include "inc/nav.php" ?>
 <section class="section-1">
+    Mange Users
 </section>
 </div>
 </body>
