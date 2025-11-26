@@ -50,27 +50,27 @@
 .body {
 	display: flex;
 }
-/* .section-1 {
-	width: 100%;
-	background: url("../img/bg.jpg");
-	background-size: cover;
-	background-position: center;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	flex-direction: column;
-} */
-/* .section-1 h1 {
-	color: #fff;
-	font-size: 60px;
+.section-1{
+	margin: 30px;
 }
-.section-1 p {
-	color: #127b8e;
-	font-size: 20px;
-	background: #fff;
-	padding: 7px;
-	border-radius: 5px;
-} */
+.section-1 .title a{
+	text-decoration: none;
+padding-left: 10px;
+display: inline-block;
+border: none;
+background: green;
+padding: 10px 15px;
+color: white;
+font-size: 16px;
+border-radius: 5px;
+cursor: pointer;
+outline: none;
+transition: background 1s;
+box-shadow: 0 8px 16px 0 rgba(0,0, 0.2),0 6px 20px 0 rgba(0, 0, 0, 0.19)
+}
+.section-1 .title a:hover{
+	color: violet;
+}
 .side-bar ul {
 	margin-top: 20px;
 	list-style: none;
@@ -86,6 +86,9 @@
 }
 .side-bar ul li:hover {
 	background: #127b8e;
+}
+.side-bar ul .active:hover {
+	background: transparent;
 }
 
 .side-bar ul li a {
@@ -142,3 +145,19 @@ form {
     margin: 0 auto 15px;
     width: 120px;         
 }
+.main-table, .main-table tr,.main-table th,.main-table td{
+border: 1px solid #aaa;
+border-collapse: collapse;
+padding: 10px;
+}
+.main-table {
+	width:50px;
+	 margin-top: 20px;
+}
+
+table th,
+table td {
+    white-space: nowrap;
+    
+}
+

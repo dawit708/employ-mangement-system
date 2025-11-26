@@ -15,9 +15,33 @@ if(isset($_SESSION['role']) && isset($_SESSION['id'])) {
 <div class="body">
  <?php include "inc/nav.php" ?>
 <section class="section-1">
-    Mange Users
+  <h4 class ="title">Mange Users <a href="add-user.php">Add user</a></h4>
+    <table class="main-table">
+      <tr>
+        <th>#</th>
+        <th>Full Name</th>
+         <th>username</th>
+          <th>role</th>
+           <th>Action</th>
+
+      </tr>
+      <tr>
+        <th>1</th>
+        <th>Dawit Tsigie</th>
+        <th>dawit</th>
+        <th>employee</th>
+        <td> 
+          <a href="">Edit</a>
+           <a href="">Delete</a>
+      </td>
+      </tr>
+    </table>
 </section>
 </div>
+<script type="text/javascript">
+    var active = document.querySelector("#navList li:nth-child(2)");
+    active.classList.add("active"); 
+</script>
 </body>
 </html>
 <?php 

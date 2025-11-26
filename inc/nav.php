@@ -44,14 +44,14 @@ if( $_SESSION['role'] == "employee"){
 } else { 
 ?>
 <!-- admin navigations -->
-<ul>
+<ul class="navList">
 <li>
 <a href="#">
 <i class="fa fa-dashboard" aria-hidden="true"></i>
 <span>Dashboard</span>
 </a>
 </li>
-<li class="active">
+<li id="active">
 <a href="user.php">
 <i class="fa fa-user" aria-hidden="true"></i>
 <span>Manage Users</span>

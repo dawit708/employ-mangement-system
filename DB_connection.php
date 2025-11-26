@@ -2,7 +2,7 @@
 $sName  = "localhost";
 $uName  = "root";
 $pass   = "";
-$db_name = "task_employ_mangement_db";
+$db_name = "task_mangement_system";
 
 try {
     $conn = new PDO("mysql:host=$sName;dbname=$db_name;charset=utf8", $uName, $pass);

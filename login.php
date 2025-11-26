@@ -22,9 +22,9 @@
 <?php echo stripslashes($_GET['success']);?>
 </div>
 <?php } 
-// $pass='123'
-// $pass=password_hash($pass,PASSWORD_DEFAULT);
-// echo $pass;
+//  $pass= 123;
+//  $pass=password_hash($pass,PASSWORD_DEFAULT);
+//  echo $pass;
 ?>
   <div class="mb-3">
     <label for="exampleInputEmail1" class="form-label">User name</label>
