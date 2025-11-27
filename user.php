@@ -1,6 +1,12 @@
 <?php 
 session_start(); 
-if(isset($_SESSION['role']) && isset($_SESSION['id'])) { 
+if(isset($_SESSION['role']) && isset($_SESSION['id'])) {
+  include "DB_connection.php";
+    include "model/user.php";
+$users_data = get_all_users($conn); 
+// echo "<pre>";
+// print_r($users_data); 
+// echo "</pre>";
 ?>
 <!DOCTYPE html>
 <html>
@@ -16,6 +22,8 @@ if(isset($_SESSION['role']) && isset($_SESSION['id'])) {
  <?php include "inc/nav.php" ?>
 <section class="section-1">
   <h4 class ="title">Mange Users <a href="add-user.php">Add user</a></h4>
+  <?php if ($users_data!=0) {
+  ?>
     <table class="main-table">
       <tr>
         <th>#</th>
@@ -23,19 +31,25 @@ if(isset($_SESSION['role']) && isset($_SESSION['id'])) {
          <th>username</th>
           <th>role</th>
            <th>Action</th>
-
       </tr>
+      <?php  $i=0; foreach ($users_data as $users_data ) {?>
+    
       <tr>
-        <th>1</th>
-        <th>Dawit Tsigie</th>
-        <th>dawit</th>
-        <th>employee</th>
+        <th><?=++$i?></th>
+        <th><? $users_data ['Full_name']?></th>
+        <th><? $users_data ['username']?></th>
+        <th><? $users_data ['role']?></th>
         <td> 
-          <a href="">Edit</a>
-           <a href="">Delete</a>
+          <a href="edit-users.php?id=<?=$users_data['id']?>" class="edit-btn">Edit</a>
+           <a href="delete-users.php?id=<?=$users_data['id']?>" class="delete-btn">Delete</a>
       </td>
-      </tr>
+      </tr>  <?php } ?>
     </table>
+    <?php } else{ ?>
+      <h3>Empty</h3>
+      <?php
+
+    } ?>
 </section>
 </div>
 <script type="text/javascript">

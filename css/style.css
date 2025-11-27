@@ -160,4 +160,72 @@ table td {
     white-space: nowrap;
     
 }
+.delete-btn{
+	text-decoration: none;
+padding-left: 10px;
+display: inline-block;
+border: none;
+background: red;
+padding: 10px 15px;
+color: white;
+font-size: 16px;
+border-radius: 5px;
+cursor: pointer;
+outline: none;
+transition: background 1s;
+box-shadow: 0 8px 16px 0 rgba(0,0, 0.2),0 6px 20px 0 rgba(0, 0, 0, 0.19)
+}
+.delete-btn a:hover{
+	color: chartreuse;
+}
+.edit-btn{
+	text-decoration: none;
+padding-left: 10px;
+display: inline-block;
+border: none;
+background:blue;
+padding: 10px 15px;
+color: white;
+font-size: 16px;
+border-radius: 5px;
+cursor: pointer;
+outline: none;
+transition: background 1s;
+box-shadow: 0 8px 16px 0 rgba(0,0, 0.2),0 6px 20px 0 rgba(0, 0, 0, 0.19)
+}
+.edit-btn a:hover{
+	color: aqua;
+}
+.form-1{
+	width: 90%;
+	max-width: 500px;
+}
+.input-holder lable{
+	display: block;
+	margin-bottom: 10px;
+}
+.input-1{
+	border: 2px solid #ccc;
+	width: 100%;
+	padding: 10px;
+	font-size: 15px;
+	outline: none;
+	border-radius: 5px;
+	display: block;
+}
+.input-1:focus{
+border-color: #555;
+}
+.danger{
+	background: #ff98aa;
+	color:#B20088 ;
+	padding: 10px;
+	margin-bottom: 10px;
+}
+.success{
+	background: #80CE91 ;
+	color: #009d22;
+	padding: 10px;
+	margin-bottom: 10px;
+}
 
