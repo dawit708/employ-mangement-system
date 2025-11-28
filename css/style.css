@@ -61,7 +61,7 @@ border: none;
 background: green;
 padding: 10px 15px;
 color: white;
-font-size: 16px;
+font-size: 14px;
 border-radius: 5px;
 cursor: pointer;
 outline: none;
@@ -177,6 +177,7 @@ box-shadow: 0 8px 16px 0 rgba(0,0, 0.2),0 6px 20px 0 rgba(0, 0, 0, 0.19)
 }
 .delete-btn a:hover{
 	color: chartreuse;
+	opacity: 6;
 }
 .edit-btn{
 	text-decoration: none;
@@ -195,6 +196,7 @@ box-shadow: 0 8px 16px 0 rgba(0,0, 0.2),0 6px 20px 0 rgba(0, 0, 0, 0.19)
 }
 .edit-btn a:hover{
 	color: aqua;
+	opacity: 6;
 }
 .form-1{
 	width: 90%;

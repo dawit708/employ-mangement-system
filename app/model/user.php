@@ -1,19 +1,20 @@
 <?php
 
-function get_all_users(PDO $conn): array {
-    $sql = "SELECT * FROM employers WHERE role = :role";
+function get_all_users( $conn) {
+    $sql = "SELECT * FROM employers WHERE role = ? ";
     $stmt = $conn->prepare($sql);
-    $stmt->execute([':role' => "employee"]);
+    $stmt->execute([ "employee"]);
     if ($stmt->rowCount() > 0) {
-        return $stmt->fetchAll();
-    } else {
-        return [];
-    }
+        $users= $stmt->fetchAll();
+    }else  $users=0;
+    return  $users;
+     }
+
+
+function insert_user($conn, $data) {
+    $sql = "INSERT INTO employers (full_name, username, password,role) VALUES (?, ?, ?,?)";
+    $stmt = $conn->prepare($sql);
+    $stmt->execute($data);
 }
 
-function insert_employers(PDO $conn, array $data): bool {
-    $sql = "INSERT INTO employers (full_name, user_name, password) VALUES(?,?,?)";
-    $stmt = $conn->prepare($sql);
-    return $stmt->execute($data);
-}
 ?>

@@ -1,6 +1,6 @@
 <?php 
 session_start(); 
-if(isset($_SESSION['role']) && isset($_SESSION['id'])) {
+if(isset($_SESSION['role']) && isset($_SESSION['id'])) { 
 ?>
 <!DOCTYPE html>
 <html>
@@ -11,13 +11,15 @@ if(isset($_SESSION['role']) && isset($_SESSION['id'])) {
 </head>
 <body>
 <input type="checkbox" id="checkbox">
- <?php include "inc/header.php" ?>
+<?php include "inc/header.php" ?>
 <div class="body">
- <?php include "inc/nav.php" ?>
+<?php include "inc/nav.php" ?>
 <section class="section-1">
-  <h4 class ="title"> Add Users <a href="user.php"> Users</a></h4>
-<form class="form-1" method="post" action="add.php">
- <?php if (isset($_GET['error'])) {?>
+   <h4 class="title">Add Users <a href="user.php">Users</a></h4>
+   <form class="form-1" method="POST" action="app/add-user.php">
+    
+
+   <?php if (isset($_GET['error'])) {?>
 <div class="danger" role="alert">
 <?php echo stripslashes($_GET['error']);?>
 </div>
@@ -28,20 +30,20 @@ if(isset($_SESSION['role']) && isset($_SESSION['id'])) {
 <?php echo stripslashes($_GET['success']);?>
 </div>
 <?php } ?>
-   <div class="input-holder">
-    <label >Full Name</label>
-    <input type="text" name ="Full_name" class="input-1" placeholder="Full Name"> <br>
-   </div> 
-   <div class="input-holder">
-    <label >username</label>
-    <input type="text" name="user_name" class="input-1" placeholder="username"> <br>
-   </div> 
-   <div class="input-holder">
-    <label >Password</label>
-    <input type="Password" name="password" class="input-1" placeholder="Password"> <br>
-   </div> 
-   <button class="edit-btn">Add</button>
-</form>
+    <div class="input-holder">
+        <label >Full Name</label>
+        <input type="text" name="full_name" class="input-1" placeholder="Full Name"> <br>
+    </div>
+    <div class="input-holder">
+        <label > username </label>
+        <input type="text" name="user_name" class="input-1" placeholder=" username "> <br>
+    </div>
+    <div class="input-holder">
+        <label > Password </label>
+        <input type=" password " name="password" class="input-1" placeholder=" password "> <br>
+    </div>
+    <button class="edit-btn">Add</button>
+   </form>
 </section>
 </div>
 <script type="text/javascript">
@@ -50,7 +52,8 @@ if(isset($_SESSION['role']) && isset($_SESSION['id'])) {
 </script>
 </body>
 </html>
-<?php } else { 
+<?php 
+} else { 
     $em = "First login"; 
     header("location: login.php?error=$em"); 
     exit(); 
