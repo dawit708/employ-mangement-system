@@ -15,7 +15,7 @@ if(isset($_SESSION['role']) && isset($_SESSION['id'])) {
         $full_name = validate_input($_POST['full_name']); 
         
         if (empty($user_name)) {   
-            $em = "User name is required";   
+            $em = "Username is required";   
             header("location: ../add-user.php?error=$em");   
             exit();  
         } else if (empty($password)) {   
@@ -33,7 +33,7 @@ if(isset($_SESSION['role']) && isset($_SESSION['id'])) {
     $data = array($full_name, $user_name, $password,"employee");
     if (insert_user($conn, $data)) {
         $sm = "User added successfully";
-        header("location: ../users.php?success=$sm");
+        header("location: ../add-user.php?success=$sm");
         exit();
          }
 }
